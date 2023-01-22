@@ -1,0 +1,37 @@
+.dataDiv {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-size: 20px;
+}
+.icons {
+  padding: 5px;
+  /* border-radius: 5px solid black; */
+}
+.container__part {
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+}
+.maincontainer {
+  display: flex;
+}
+.textDiv {
+  font-size: 20px;
+}
+.aqidiv {
+  display: flex;
+  flex-direction: column;
+}
+.aqidiv > div {
+  margin: 5px;
+}
+.testClass {
+  display: flex;
+  flex-direction: column;
+}
+.createSpace {
+  margin-top: 30px;
+}

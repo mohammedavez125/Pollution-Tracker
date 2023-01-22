@@ -1,9 +1,11 @@
 import axios from "./axios.js";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./css/IPgeolocation.css";
+import RenderThis from "./RenderThis.js";
 
 function IPgeolocation() {
-  const key = "e111813b-0f99-4ef2-8e73-c75ce62b2e32";
+  const key = "02249e35-8124-449e-bb82-e18e3b649efb";
   const [info, setInfo] = useState([]);
   // const [search, setSearch] = useState("India");
 
@@ -17,18 +19,17 @@ function IPgeolocation() {
   const data = info?.data;
 
   return (
-    <div>
-      IPgeolocation
+    <div className="mainDiv">
+      <h1>IP Geolocation</h1>
+
       {/* {JSON.stringify(data)} */}
-      <br />
-      <ol>
-        <li>City={data?.city}</li>
-        <li>State={data?.state}</li>
-        <li>country={data?.country}</li>
-        <li>{console.log(JSON.stringify(data))}</li>
-      </ol>
+      <div className="renderer">
+        <RenderThis info={data} />
+        <img src="https://media.licdn.com/dms/image/C5112AQFoWvjosy1ztA/article-cover_image-shrink_600_2000/0/1581337369402?e=2147483647&v=beta&t=8YAt5ZNZTRDqZzcKiQpiOsDhrd_aVA20o3mHeOJXYUw" />
+      </div>
+
       <Link to="/">
-        <button>Home</button>
+        <button className="backButton">Home</button>
       </Link>
     </div>
   );
